@@ -1,0 +1,26 @@
+
+.expand-header{
+    background: var(--ion-color-dark);
+    padding-top: 60px;
+    &::before{
+        background: var(--ion-color-dark);
+    }
+}
+
+
+.input-group{
+    .form-control{
+        height: auto;
+        border-left: 0;
+        padding-left: 0;
+    }
+
+    .input-group-text{
+        background: #fff;
+        border-right: 0;
+    }
+
+    .mdi{
+        color: var(--ion-color-secondary);
+    }
+}

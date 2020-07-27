@@ -1,0 +1,54 @@
+ion-content {
+    --background: #fdf7f2;
+}
+
+.expand-header{
+    background: var(--ion-color-secondary);
+    padding-top: 30px;
+    &::before{
+        background: var(--ion-color-secondary);
+    }
+}
+
+ion-card{
+    margin-top: -9px;
+}
+
+/* Custom Skeleton Line Height and Margin */
+ion-skeleton-text {
+    line-height: 20px;
+    margin-bottom: 5px;
+}
+
+ion-avatar.photo{
+    width: 100px !important;  
+    height : 100px !important;
+    margin: auto;
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+}
+
+#qr{
+    width: 100%;
+}
+
+hr{
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.valign-wrapper {
+    height: 50%;
+}
+
+ion-spinner{
+    margin: 40px auto;
+    display: block;
+}
+
+app-upload-image{
+    width: 90px;
+    height: 90px;
+}

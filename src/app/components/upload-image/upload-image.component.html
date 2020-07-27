@@ -1,0 +1,14 @@
+<!-- Upload image -->
+<div class="avatar-upload circle">
+  <div class="avatar-edit" *ngIf="showControls">
+     <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" #fileInput (change)="uploadFile($event)" />
+     <label for="imageUpload" *ngIf="editFile" [ngClass]="['custom-label', 'upload-image']"></label>
+     <label *ngIf="removeUpload" [ngClass]="['custom-label', 'remove-image']" (click)="removeUploadedFile()"></label>
+  </div>
+  <div class="avatar-preview">
+     <div id="imagePreview" [style.backgroundImage]="'url('+ imageUrl +')'">
+     </div>
+  </div>
+</div>
+
+<ion-progress-bar *ngIf="porcentaje > 0 && porcentaje < 100" color="primary" [value]="porcentaje"></ion-progress-bar>

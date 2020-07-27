@@ -1,0 +1,31 @@
+<ion-content>
+  
+  <div class="expand-header">
+    <img src="assets/img/logo.png" width="200" style="margin: 20px auto; display: block;">
+  </div>
+
+  <div class="ion-padding pt-5">
+    <form #formRegister="ngForm" (ngSubmit)="onRegister()">
+      <div class="form-group">
+        <input type="text" name="fullName" class="form-control  animate__animated animate__backInLeft" placeholder="Nombre completo" [(ngModel)]="fullName" required minlength="8">
+      </div>
+      <div class="form-group">
+        <input type="email" name="email" class="form-control  animate__animated animate__backInLeft" placeholder="Correo" [(ngModel)]="email" required minlength="8">
+      </div>
+      <div class="form-group">
+        <input type="email" name="emailConfirm" class="form-control  animate__animated animate__backInLeft" placeholder="Confirmar Correo" [(ngModel)]="emailConfirm" required minlength="8">
+      </div>
+      <div class="form-group">
+        <input type="password" name="password" class="form-control  animate__animated animate__backInLeft" placeholder="Contraseña" [(ngModel)]="password" required minlength="6" maxlength="10">
+      </div>
+      <div class="form-group">
+        <input type="password" name="passwordConfirm" class="form-control  animate__animated animate__backInLeft" placeholder="Contraseña" [(ngModel)]="passwordConfirm" required minlength="6" maxlength="10">
+      </div>
+      <ion-button shape="round" expand="block" color="primary" type="submit" *ngIf="!isloading">CONTINUAR <i class="mdi mdi-arrow-right"></i></ion-button>
+      <ion-button shape="round" expand="block" color="primary" type="button" *ngIf="isloading" class="btn btn-lg btn-primary btn-block"><i class="mdi mdi-loading mdi-spin"></i></ion-button>
+          
+      <div class="text-center mt-3 mb-3">Si ya tiene una cuenta <a routerLink="/auth/login">inicia sesion</a></div>
+    </form>
+  </div>
+  
+</ion-content>

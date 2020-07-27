@@ -1,0 +1,37 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="secondary">
+    <ion-menu-toggle slot="start">
+      <i class="ml-2 mdi mdi-menu mdi-24px"></i>
+    </ion-menu-toggle>
+    <ion-title></ion-title>
+    <!-- <div slot="end">
+      <i class="mr-2 mdi mdi-map-marker-outline mdi-24px"></i>
+    </div> -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="expand-header">
+    <div *ngIf="user" class="text-center text-white">
+      <app-upload-image [image]="user.urlPhoto ? user.urlPhoto : 'assets/img/default.jpg'" [controls]="false"></app-upload-image>
+  
+      <h5 [routerLink]="['/page/profile']">{{user?.name}}</h5>
+      <div>{{ user?.email }}</div>
+          
+    </div>
+
+    <div *ngIf="!user" class="text-center">
+      
+      <ion-avatar class="photo">
+        <ion-skeleton-text animated style="width: 100%;"></ion-skeleton-text>
+      </ion-avatar>
+  
+      <h5><ion-skeleton-text animated style="width: 70%; margin-left: auto; margin-right: auto;"></ion-skeleton-text></h5>
+      <div><ion-skeleton-text animated style="width: 50%; margin-left: auto; margin-right: auto;"></ion-skeleton-text></div>
+          
+    </div>
+
+  </div>
+
+
+</ion-content>

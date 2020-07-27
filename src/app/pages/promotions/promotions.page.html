@@ -1,0 +1,36 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="primary">
+    <ion-menu-toggle slot="start">
+      <i class="ml-2 mdi mdi-menu mdi-24px"></i>
+    </ion-menu-toggle>
+    <ion-title>PROMOCIONES</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="expand-header" *ngIf="items.length > 0">
+  </div>
+
+    
+  <div class="list-offset" *ngIf="items.length > 0">
+    <ion-card *ngFor="let item of items" (click)="presentModal(item.id)">
+      <!-- <img [src]="item.photoUrl"> -->
+      <ion-card-header>
+        <ion-card-subtitle>{{item.address}}</ion-card-subtitle>
+        <ion-card-title>{{item.title}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-badge color="success">{{item.price | currency:'COP':'$ ':'1.0-0' }}</ion-badge>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div class="valign-wrapper" *ngIf="items.length == 0">
+    <div id="wrap-empty">
+      <i class="mdi mdi-sale mdi-48px"></i>
+      <p>No se encontró ningún registro</p>
+    </div>
+  </div>
+
+</ion-content>

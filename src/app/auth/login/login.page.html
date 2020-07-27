@@ -1,0 +1,30 @@
+<ion-content>
+  <div class="expand-header">
+    <img src="assets/img/logo.png" width="200" style="margin: 20px auto; display: block;">
+  </div>
+
+  <div class="ion-padding pt-5">
+    <form #formLogin="ngForm" (submit)="onLogin()">
+      <div class="form-group animate__animated animate__pulse">
+        <div class="input-group mb-2">
+          <div class="input-group-prepend">
+            <div class="input-group-text"><i class="mdi mdi-account"></i></div>
+          </div>
+          <input [(ngModel)]="email" type="email" id="email" name="email" class="form-control" placeholder="Username" required>
+        </div>
+      </div>
+      <div class="form-group animate__animated animate__pulse">
+        <div class="input-group mb-2">
+          <div class="input-group-prepend">
+            <div class="input-group-text"><i class="mdi mdi-lock"></i></div>
+          </div>
+          <input [(ngModel)]="password" type="password" id="password" name="password" class="form-control" placeholder="Contraseña" required>
+        </div>
+      </div>
+      <ion-button shape="round" expand="block" color="primary" type="submit" *ngIf="!isloading">CONTINUAR <i class="mdi mdi-arrow-right"></i></ion-button>
+      <ion-button shape="round" expand="block" color="primary" type="button" *ngIf="isloading"><i class="mdi mdi-loading mdi-spin"></i></ion-button>
+      <div class="animate__animated animate__fadeIn text-center mt-3 mb-3">No tienes cuanta? <a routerLink="/auth/register">Registrate</a></div>
+      
+    </form>
+  </div>
+</ion-content>

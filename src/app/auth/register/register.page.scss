@@ -1,0 +1,7 @@
+.expand-header{
+    background: var(--ion-color-dark);
+    padding-top: 60px;
+    &::before{
+        background: var(--ion-color-dark);
+    }
+}

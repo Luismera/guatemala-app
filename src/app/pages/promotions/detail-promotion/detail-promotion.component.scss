@@ -1,0 +1,21 @@
+#mapa-mapbox{
+    height: 300px;
+    width: 100%;
+    // overflow: hidden;
+    background-color: #202020;
+    overflow: hidden;
+}
+
+ion-content {
+    --background: #fdf7f2;
+}
+#header-custom{
+    position: relative;
+    ion-icon{
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        color: #fff;
+        font-size: 20px;
+    }
+}

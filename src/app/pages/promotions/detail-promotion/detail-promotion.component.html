@@ -1,0 +1,12 @@
+<ion-content fullscreen="true">
+  <div id="header-custom">
+    <ion-icon (click)="dismissModal()" [icon]="'arrow-back-outline'"></ion-icon>
+    <div id="mapa-mapbox"></div>
+  </div>
+  <div class="ion-padding" *ngIf="item">
+    <div class="h3">{{item.title}}</div>
+    <div>{{item.address}}</div>
+    <ion-badge color="success">{{item.price | currency:'COP':'$ ':'1.0-0' }}</ion-badge>
+  </div>
+  <ion-spinner *ngIf="loading"></ion-spinner>
+</ion-content>
